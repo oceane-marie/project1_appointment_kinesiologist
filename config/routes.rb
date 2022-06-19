@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :appointment, only: [:new]
+  resources :appointments, only: [:new]
 
-  resources :user, only: [:show]
+  resources :patients, only: [:show]
 
   get 'about', to: 'pages#about'
 
