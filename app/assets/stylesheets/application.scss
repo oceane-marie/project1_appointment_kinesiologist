@@ -32,4 +32,19 @@ body{
     font-family: $body-font;
     font-size: 24px;
   }
+
+  a{
+    text-decoration: none;
+    color: $beige;
+    &:hover{
+      text-decoration: none;
+      color: $beige;
+      opacity: 0.8;
+    }
+  }
+}
+
+.ctr-page{
+  margin: 0px 120px;
+  height: 100vh;
 }

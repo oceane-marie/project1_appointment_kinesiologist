@@ -1,6 +1,20 @@
 <div class='ctr-page'>
-  <h1>Pages#home</h1>
-  <p>Vous êtes au bon endroit</p>
+  <div id="navbar" class="d-flex justify-content-between mt-5">
+    <div id="left" class="d-flex">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-house"></i>
+      <% end %>
+      <h3>A propos</h3>
+    </div>
+    <div id="right" class="d-flex">
+      <% if user_signed_in? %>
+        <h3><%= link_to "Mes rendez-vous", user_path(@user), class:'text'%></h3>
+        <h3><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></h3>
+      <% else %>
+        <h3><%= link_to "Se connecter", new_user_session_path%></h3>
+      <% end %>
+    </div>
+  </div>
 
   <div class="hp-text">
     <h1>Marie Lageyre</h1>
