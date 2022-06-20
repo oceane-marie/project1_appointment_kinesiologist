@@ -1,1 +1,32 @@
 // Specific CSS for your home-page
+.ctr-images{
+
+  position: relative;
+  #man, #woman{
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+  }
+  #man{
+    top: 50px;
+    left: 68px;
+    height: 70vh;
+    width: 50vw;
+  }
+  #woman{
+    right: 50px;
+    top: 100px;
+    height: 70vh;
+    width: 25vw;
+  }
+}
+
+.hp-text{
+  padding-top: 75px;
+  // padding-left: 75px;
+  width: fit-content;
+  h2{
+    text-align: right;
+  }
+}
