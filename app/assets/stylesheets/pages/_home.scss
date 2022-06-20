@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 .ctr-images{
-
   position: relative;
   #man, #woman{
     position: absolute;
@@ -12,13 +11,13 @@
     top: 50px;
     left: 68px;
     height: 70vh;
-    width: 50vw;
+    width: 60%;
   }
   #woman{
     right: 50px;
     top: 100px;
     height: 70vh;
-    width: 25vw;
+    width: 25%;
   }
 }
 
@@ -28,5 +27,28 @@
   width: fit-content;
   h2{
     text-align: right;
+    line-height: 80px;
+  }
+  h1,h2{
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 1254px) {
+  #man{
+    top: 50px;
+    left: 68px;
+  }
+  #woman{
+    right: 50px;
+    top: 100px;
+  }
+  .hp-text{
+    h1{
+      font-size: 62px;
+    }
+    h2{
+      font-size: 32px;
+    }
   }
 }

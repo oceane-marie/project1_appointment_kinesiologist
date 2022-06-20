@@ -1,32 +1,17 @@
-<div class='ctr-page'>
-  <div id="navbar" class="d-flex justify-content-between mt-5">
-    <div id="left" class="d-flex">
-      <%= link_to root_path do %>
-        <i class="fa-solid fa-house"></i>
-      <% end %>
-      <h3>A propos</h3>
-    </div>
-    <div id="right" class="d-flex">
-      <% if user_signed_in? %>
-        <h3><%= link_to "Mes rendez-vous", user_path(@user), class:'text'%></h3>
-        <h3><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></h3>
-      <% else %>
-        <h3><%= link_to "Se connecter", new_user_session_path%></h3>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="ctr-images d-flex">
+<div class="ctr-images d-flex">
+  <div class="col-6">
     <%= image_tag("man_hp.jpeg", id:"man")%>
+  </div>
+  <div class="col-3">
     <%= image_tag("woman_hp.jpeg", id: "woman")%>
   </div>
+</div>
 
+<div class="d-flex justify-content-between">
   <div class="hp-text">
     <h1>Marie Lageyre,</h1>
     <h2>Kinésiologue</h2>
   </div>
-
-
 
   <%= link_to  new_appointment_path do %>
   <div class="btn-rdv">
