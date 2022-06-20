@@ -4,8 +4,19 @@
   box-shadow: 5px 5px 10px #291d1d;
   margin-top: 450px;
   h3{
-    padding: 25px 25px;
+    padding: 21px 16px;
     font-size: 24px;
     letter-spacing: 1px;
+    color: $beige;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $beige;
+    opacity: 0.8;
+  }
+}
+@media (max-width: 500px) {
+  #woman{
+    display: none;
   }
 }
