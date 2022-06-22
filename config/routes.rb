@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
 
-  resources :appointments, only: [:new]
+  resources :appointments, only: [:new, :create]
 
   resources :users, only: [:show]
 
