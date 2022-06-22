@@ -1,9 +1,12 @@
-<h1>Prendre rendez-vous</h1>
-  <%= simple_form_for @appointment do |f| %>
-    <%= f.input :date, as: :date, html5: true %>
-    <%# <%= f.input :time_zone, priority: /FR/, html5: true %>
-    <%# Or %>
-    <%= f.input :time, as: :time, html5: true %>
-    <p>Tarif: 50€</p>
-    <%= f.button :submit, "Confirmer", class: "btn" %>
-  <% end %>
+<h1 class="pt-24">Prendre rendez-vous</h1>
+
+<div class="pt-24">
+  <div class="col-6 offset-3">
+    <%= simple_form_for @appointment do |f| %>
+      <%= f.input :date, as: :date, html5: true %>
+      <%= f.input :time, as: :time, html5: true %>
+      <p>Tarif: 50€</p>
+      <%= f.button :submit, "Confirmer", class: "btn btn-basic", id: "btn-new" %>
+    <% end %>
+  </div>
+</div>
