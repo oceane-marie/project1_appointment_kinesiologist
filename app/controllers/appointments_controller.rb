@@ -3,12 +3,15 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
+    @user = current_user
   end
 
   def create
+    @appointment = Appointment.new(appointment_params)
     @user = current_user
-    @appointments = Appointment.create(appointment_params)
-    redirect_to user_path(current_user)
+    if @appointment.save
+      redirect_to user_path(current_user)
+    end
   end
 
   private

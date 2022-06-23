@@ -2,11 +2,11 @@
 
 <div class="pt-24">
   <div class="col-6 offset-3">
-    <%= simple_form_for @appointment do |f| %>
+    <%= simple_form_for new_user_appointment_path(@user) do |f| %>
       <%= f.input :date, as: :date, html5: true %>
       <%= f.input :time, as: :time, html5: true %>
       <p>Tarif: 50€</p>
-      <%= f.button :submit, "Confirmer", class: "btn btn-basic", id: "btn-new" %>
+      <%= f.submit "Confirmer", class: "btn btn-basic", id: "btn-new" %>
     <% end %>
   </div>
 </div>
