@@ -3,15 +3,18 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
-    @user = current_user
+    @user = User.find(params[:user_id])
   end
 
   def create
+    @user = User.find(params[:user_id])
     @appointment = Appointment.new(appointment_params)
-    @user = current_user
+    @appointment.user = @user
+
     if @appointment.save
       redirect_to user_path(current_user)
     end
+
   end
 
   private
