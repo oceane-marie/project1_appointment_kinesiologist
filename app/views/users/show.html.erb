@@ -1,5 +1,17 @@
 <h1 class="pt-24">Vous êtes sur le profil du patient</h1>
-<% @appointments.each do |appointment| %>
-  <%= appointment.date %>
-  <%= appointment.time %>
-<% end %>
+<div class= d-flex>
+  <div>
+    <% @pending_appointments.each do |appointment| %>
+      <p>Votre prochain rendez-vous est prévu
+      <br>le <%= appointment.date %>
+      <br>à <%= appointment.time.strftime('%I:%M %p') %></p>
+    <% end %>
+  </div>
+   <% @checked_appointments.each do |appointment| %>
+      <p>Vous avez eu rendez-vous
+      <br>le <%= appointment.date %>
+      <br>à <%= appointment.time.strftime('%I:%M %p') %></p>
+    <% end %>
+  <div>
+  </div>
+</div>
