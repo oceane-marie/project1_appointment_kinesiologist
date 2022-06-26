@@ -12,6 +12,7 @@ class AppointmentsController < ApplicationController
     @appointment.user = @user
 
     if @appointment.save
+      UserMailer.with(user: @user, appointment: @appointment).appointment.deliver_later
       redirect_to user_path(current_user)
     end
 
