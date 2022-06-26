@@ -6,9 +6,9 @@ class UserMailer < ApplicationMailer
   #
   def appointment
     @user = params[:user] # Instance variable => available in view
-    @appointment = Appointment.last
+    @appointment = params[:appointment]
     # @time = appointment.time
-    mail(to: @user.email, subject: 'Votre rendez-vous a bien été confirmé')
+    mail(to: @appointment.user.email, subject: 'Votre rendez-vous a bien été confirmé')
     # This will render a view in `app/views/user_mailer`!
   end
 end

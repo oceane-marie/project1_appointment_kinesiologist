@@ -1,6 +1,6 @@
 <p>Bonjour <%= @user.first_name %> <%= @user.last_name %>,</p>
 
-<p>Votre rendez-vous a bien été confirmé pour le <%= @appointment %> <%= @time %></p>
+<p>Votre rendez-vous a bien été confirmé pour le <%= @appointment.date.strftime('%d/%m/%Y') %> à <%= @appointment.time.strftime('%Hh%M')  %></p>
 
 
 <p>A bientôt</p>
