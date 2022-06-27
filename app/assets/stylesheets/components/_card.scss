@@ -1,0 +1,23 @@
+.card-app-pending{
+  background-color: $beige;
+  color: $dark-brown;
+  width: fit-content;
+  padding: 25px;
+  margin-left: 20%;
+  &:hover{
+    box-shadow: 10px 10px 0px rgb(41, 29, 29);
+  }
+}
+
+.card-app-checked{
+  position: relative;
+  width: fit-content;
+  background-color: $dark-brown;
+  padding: 25px;
+  &:hover{
+    box-shadow: 10px 10px 0px $beige;
+  }
+  .fa-xmark{
+    position: absolute
+  }
+}

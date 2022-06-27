@@ -1,18 +1,12 @@
 #btn-rdv{
-  // background-color: $dark-brown;
-  box-shadow: 5px 5px 10px #291d1d;
-  // width: fit-content;
   margin-top: 450px;
   h3{
     padding: 21px 16px;
     font-size: 24px;
     letter-spacing: 1px;
-    // color: $beige;
   }
   &:hover{
-    // text-decoration: none;
-    // color: $beige;
-    opacity: 0.8;
+    background-color: $brown;
   }
 }
 
@@ -27,11 +21,11 @@
 }
 
 #btn-new{
-  box-shadow: 5px 5px 0px #291d1d;
   &:hover{
     background-color: $brown;
   }
 }
+
 @media (max-width: 500px) {
   #woman{
     display: none;

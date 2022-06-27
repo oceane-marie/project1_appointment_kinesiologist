@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def new
     @appointment = Appointment.new
@@ -15,7 +15,12 @@ class AppointmentsController < ApplicationController
       UserMailer.with(user: @user, appointment: @appointment).appointment.deliver_later
       redirect_to user_path(current_user)
     end
+  end
 
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
+    redirect_to user_path(current_user)
   end
 
   private

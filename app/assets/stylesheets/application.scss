@@ -25,12 +25,12 @@ body{
   }
 
   h2{
-    font-size: 48px;
+    font-size: 24px;
   }
 
   p{
     font-family: $body-font;
-    font-size: 24px;
+    font-size: 19px;
   }
 
   a{
@@ -51,4 +51,12 @@ body{
 
 .pt-24{
   padding-top: 24px;
+}
+
+.tx-center{
+  text-align: center;
+}
+
+.border-right{
+  border-right: 2px solid $beige;
 }
