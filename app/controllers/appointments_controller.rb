@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def create

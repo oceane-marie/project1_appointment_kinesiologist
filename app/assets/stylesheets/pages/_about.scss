@@ -1,0 +1,20 @@
+
+#me{
+  height: 70vh;
+  width: 30%;
+  object-fit: cover;
+  object-position: center;
+  position: sticky;
+  top: 10px;
+}
+
+.card-about{
+  width: 60%;
+  background-color: $beige;
+  color: $brown;
+  padding: 25px;
+}
+
+.border-middle{
+  border-bottom: 2px solid $brown;
+}
