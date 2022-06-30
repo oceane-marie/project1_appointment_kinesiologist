@@ -21,3 +21,16 @@
     position: absolute
   }
 }
+
+.card-checked{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+@media (max-width: 576px) {
+  .card-checked{
+    flex-direction: column;
+  }
+}

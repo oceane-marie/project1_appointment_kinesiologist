@@ -1,7 +1,7 @@
 <h1 class="pt-24">Mes rendez-vous</h1>
 
 <div class="col-6 offset-3">
-  <div id="profil" class="tx-center mt-5">
+  <div id="profil" class="tx-center mt-2">
     <h2>Mes renseignements personnels</h2>
     <p>Prénom: <%= @user.first_name %></p>
     <p>Nom: <%= @user.last_name %></p>
@@ -11,12 +11,12 @@
 </div>
 
 <div class="row mt-5">
-  <div class="col-6">
+  <div class="col-6 ">
     <div class="tx-center border-right">
       <h2>Mes prochains rendez-vous</h2>
         <% if @pending_appointments.empty? %>
           <p>Vous n'avez pas de rendez-vous prévu</p>
-          <%= link_to new_user_appointment_path(@user) do %>
+          <%= link_to new_appointment_path do %>
             <div class="btn btn-basic" id="btn-rdv">
               <h3>Prendre rendez-vous</h3>
             </div>
@@ -35,7 +35,7 @@
 
   <div class="col-6 tx-center">
     <h2>Mes rendez-vous passés</h2>
-    <div class="d-flex justify-content-around">
+    <div class="card-checked">
     <% @checked_appointments.each do |appointment| %>
     <div class="card-app-checked mt-5">
       <p>Vous avez eu rendez-vous
