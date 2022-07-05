@@ -1,13 +1,12 @@
 #btn-rdv{
-  margin-top: 450px;
   h3{
     padding: 21px 16px;
     font-size: 24px;
     letter-spacing: 1px;
   }
-  &:hover{
-    background-color: $brown;
-  }
+}
+.mt-450{
+  margin-top: 450px;
 }
 
 .btn-basic{
@@ -17,6 +16,7 @@
   &:hover{
     text-decoration: none;
     color: $beige;
+    background-color: $brown;
   }
 }
 

@@ -1,7 +1,7 @@
 <h1 class="pt-24">Mes rendez-vous</h1>
 
 <div class="col-6 offset-3">
-  <div id="profil" class="tx-center mt-2">
+  <div id="profil" class="tx-center mt-3">
     <h2>Mes renseignements personnels</h2>
     <p>Prénom: <%= @user.first_name %></p>
     <p>Nom: <%= @user.last_name %></p>
@@ -23,7 +23,7 @@
           <% end %>
         <% else %>
           <% @pending_appointments.each do |appointment| %>
-            <div class="card-app-pending mt-5">
+            <div class="card-app-pending mt-3">
               <p>Votre prochain rendez-vous est prévu
               <br>le <%= appointment.date.strftime('%d/%m/%Y')  %>
               <br>à <%= appointment.time.strftime('%Hh%M') %></p>
@@ -35,9 +35,9 @@
 
   <div class="col-6 tx-center">
     <h2>Mes rendez-vous passés</h2>
-    <div class="card-checked">
+    <div class="card-checked mb-5">
     <% @checked_appointments.each do |appointment| %>
-    <div class="card-app-checked mt-5">
+    <div class="card-app-checked mt-3">
       <p>Vous avez eu rendez-vous
       <br>le <%= appointment.date.strftime('%d/%m/%Y') %>
       <br>à <%= appointment.time.strftime('%Hh%M') %></p>

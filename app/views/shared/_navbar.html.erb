@@ -5,11 +5,12 @@
       <% end %>
       <%= link_to about_path do  %>
         <h3>A propos</h3>
+        <h3><%= link_to "Contacter", new_contact_path, class: 'p-3'%></h3>
       <% end %>
     </div>
     <div id="right" class="d-flex">
       <% if user_signed_in? %>
-        <h3><%= link_to "Mes rendez-vous", user_path(current_user), class:'pr-42'%></h3>
+        <h3><%= link_to "Mes rendez-vous", user_path(current_user), class:'p-3'%></h3>
         <h3><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></h3>
       <% else %>
         <h3><%= link_to "Se connecter", new_user_session_path%></h3>

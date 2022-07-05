@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :appointments, only: [:new]
 
+  resources :contacts, only: [:new, :create]
+
   resources :users, only: [:show]
 
   resources :users, only: [:show] do

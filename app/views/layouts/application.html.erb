@@ -18,6 +18,9 @@
       <%= yield %>
       <p class="notice">
       <p class="alert">
+      <% flash.each do |key, message| %>
+        <p class="alert alert-<%= key %>"><%= message %></p>
+      <% end %>
     </div>
   </body>
 

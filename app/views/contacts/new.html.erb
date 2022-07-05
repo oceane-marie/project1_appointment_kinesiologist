@@ -1,0 +1,23 @@
+<h1 class="mt-3">Envoyer un message</h1>
+<%= form_for @contact do |f| %>
+  <div class="col-6 offset-3">
+    <div class="form-basic mt-3">
+      <p><%= f.label :Nom %></br></p>
+      <%= f.text_field  :name, required: true, class: "contact-form-text-area w-100" %></br>
+
+      <p><%= f.label :Email, class:"mt-3" %></br></p>
+      <%= f.text_field :email, required: true, class: "contact-form-text-area w-100" %></br>
+
+      <p><%= f.label :Message, class:"mt-3"%></br></p>
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area w-100",
+            placeholder: "Votre message"%></br>
+
+      <div class= "d-none">
+        <%= f.label :nickname %>
+        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
+      <%= f.submit 'Envoyer', class: 'btn btn-basic mt-3', id: 'btn-new' %>
+    </div>
+  </div>
+<% end %>
